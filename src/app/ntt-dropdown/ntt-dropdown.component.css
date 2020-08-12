@@ -1,0 +1,72 @@
+.ntt-dd {
+    width: 100%;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.ntt-dd-search-section {
+    background: #eee;
+    margin: 0 1rem 1rem 1rem;
+}
+
+.ntt-dd-row {
+    display: flex;
+    font-size: 1.4rem;
+    padding-bottom: 0.5rem;
+    margin: 1rem 1rem 0 1rem;
+    background: #eee;
+    padding: 1rem 1.5rem;
+}
+
+.ntt-dd-selectedVal {
+    width: 98%;
+}
+
+.ntt-dd-search-box {
+    margin: 1rem;
+}
+
+.ntt-dd-search-box input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #000;
+    outline: none;
+    font-size: 1.4rem;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+}
+
+.ntt-dd-search-res {
+    list-style: none;
+    font-size: 1.4rem;
+    padding: 0 0 0 2rem;
+    margin: 0;
+}
+
+.ntt-dd-more {
+    text-align: right;
+    margin-right: 1rem;
+}
+
+.ntt-dd-search-nores {
+    font-size: 1.4rem;
+    text-align: center;
+    display: flex;
+    margin: 1.5rem;
+}
+
+.ntt-dd-search-nores .btn {
+    padding: 0.5rem;
+    border: 1px solid #000;
+    margin-left: 1.5rem;
+}

@@ -1,0 +1,47 @@
+<div class="ntt-dd">
+
+    <div class="ntt-dd-row" (click)="showSearchBox()">
+        <span class="ntt-dd-selectedVal">
+          {{ (selectedItem && selectedItem.value) ? selectedItem.value : 'Select Location' }}
+        </span>
+
+        <span>
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-down-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+          </svg>
+        </span>
+
+    </div>
+
+    <div class="ntt-dd-search-section" *ngIf="displaySearch">
+        <div class="ntt-dd-search-box">
+            <input #nttDDInput [(ngModel)]="searchText" (ngModelChange)="inputChanged($event)" placeholder="Search">
+        </div>
+        <div class="ntt-dd-search-data">
+            <ul class="ntt-dd-search-res" *ngIf="listData && listData.length > 0 else errTemp">
+                <ng-container *ngFor="let row of listData; let index = index">
+                    <li (click)="selectItem(row)">{{row.value}}</li>
+                </ng-container>
+            </ul>
+            <ng-template #errTemp>
+                <div class="ntt-dd-search-nores">
+                    <span>
+                  "{{searchText}}" Not Found
+                </span>
+                    <span class="btn" *ngIf="displayAddBtn" (click)="addCountry()">
+                  Add & Select
+                </span>
+                </div>
+
+            </ng-template>
+
+            <div class="ntt-dd-more">
+                <span (click)="loadMore()" *ngIf="totalLength > maxDisplayItem && displayMore">
+                  {{moreVal}} More
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+</div>
